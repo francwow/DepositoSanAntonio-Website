@@ -1,0 +1,85 @@
+/* Fonts -------------- */
+@font-face {
+  font-family: Exotc350;
+  src: url(../fonts/Exotc350\ Bd\ BT\ Bold.ttf);
+}
+
+@font-face {
+  font-family: gothic;
+  src: url(../fonts/GOTHIC.TTF);
+}
+
+@font-face {
+  font-family: myriad;
+  src: url(../fonts/MyriadPro-Regular.otf);
+}
+
+/* Main styles ----------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(65, 64, 64);
+  color: white;
+}
+
+.main-header {
+  font-family: myriad, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  display: flex;
+  margin-right: 40px;
+  justify-content: end;
+}
+
+.main-header ul {
+  width: 200px;
+  height: fit-content;
+  padding-left: 0;
+}
+
+.main-header li {
+  list-style: none;
+  text-align: end;
+}
+
+.main-header a {
+  border-right: 1px white solid;
+  padding: 0.1rem 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-line-container {
+  position: relative;
+}
+
+.main-line {
+  position: absolute;
+  border-left: 1px solid white;
+  height: 100vh;
+  right: 40px;
+}
+
+/* Pseudo-classes ---------------*/
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.main-header a:hover {
+  color: rgb(204, 255, 238);
+}
+
+.main-header a:focus {
+  background: darkslategrey;
+  color: tomato;
+  text-decoration: underline;
+  border-right: 2px tomato solid;
+}
