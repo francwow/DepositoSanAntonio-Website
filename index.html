@@ -9,18 +9,54 @@
     <link rel="stylesheet" href="styles/index.css" />
   </head>
   <body>
-    <div class="main-line-container">
-      <span class="main-line"></span>
-    </div>
+    <input type="checkbox" id="header-toggle" class="header-toggle" />
     <header class="main-header">
       <ul>
-        <li><a href="#">Principal</a></li>
-        <li><a href="#">Nosotros</a></li>
-        <li><a href="#">Materiales</a></li>
-        <li><a href="#">Ofertas</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a class="header_nav" href="#home">Principal</a></li>
+        <li><a class="header_nav" href="#about">Nosotros</a></li>
+        <li><a class="header_nav" href="#">Materiales</a></li>
+        <li><a class="header_nav" href="#">Ofertas</a></li>
+        <li><a class="header_nav" href="#">Contacto</a></li>
       </ul>
+      <label class="toggle-label" for="header-toggle"><a>X</a></label>
     </header>
-    <main></main>
+    <main>
+      <section class="home" id="home">
+        <span class="main-line"></span>
+        <div class="content-wrapper">
+          <img
+            class="logo"
+            src="img/logo_placeholder.png"
+            alt="Logo Deposito San Antonio E Hijos"
+          />
+          <h1>Depósito San Antonio E Hijos S.A.S</h1>
+          <p>
+            Compra y venta de materiales industriales. Comercializamos tuberías,
+            barras y ejes de acero, nuevos y de segunda mano.
+          </p>
+        </div>
+        <aside class="whatsapp">
+          <a href="#"><img src="img/whatsapp.png" alt="Whatsapp logo" /></a>
+        </aside>
+      </section>
+      <section class="about" id="about">
+        <div class="content-wrapper-about">
+          <h2>Nosotros</h2>
+          <p>
+            Nos caracterizamos por brindar un servicio de calidad con precios
+            más asequibles para nuestros clientes, contribuyendo al desarrollo
+            de Colombia. La empresa se desempeña en varios campos de actividad
+            petrolera y de construcción. Con ventas al retal y de línea con
+            productos nuevos y de segunda mano.
+          </p>
+          <img
+            class="about_img"
+            src="img/img_worker.JPG"
+            alt="Man working with pipes"
+          />
+        </div>
+      </section>
+    </main>
+    <footer></footer>
   </body>
 </html>
