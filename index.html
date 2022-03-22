@@ -14,11 +14,11 @@
       <ul>
         <li><a class="header_nav" href="#home">Principal</a></li>
         <li><a class="header_nav" href="#about">Nosotros</a></li>
-        <li><a class="header_nav" href="#">Materiales</a></li>
+        <li><a class="header_nav" href="#materiales">Materiales</a></li>
         <li><a class="header_nav" href="#">Ofertas</a></li>
         <li><a class="header_nav" href="#">Contacto</a></li>
       </ul>
-      <label class="toggle-label" for="header-toggle"><a>X</a></label>
+      <label class="toggle-label" for="header-toggle"><a>---</a></label>
     </header>
     <main>
       <section class="home" id="home">
@@ -40,7 +40,7 @@
         </aside>
       </section>
       <section class="about" id="about">
-        <div class="content-wrapper-about">
+        <div class="content-wrapper-box">
           <h2>Nosotros</h2>
           <p>
             Nos caracterizamos por brindar un servicio de calidad con precios
@@ -49,11 +49,82 @@
             petrolera y de construcción. Con ventas al retal y de línea con
             productos nuevos y de segunda mano.
           </p>
-          <img
-            class="about_img"
-            src="img/img_worker.JPG"
-            alt="Man working with pipes"
-          />
+          <img class="about_img" src="img/tubos.png" alt="tubería" />
+        </div>
+      </section>
+      <section class="materiales" id="materiales">
+        <div class="section_title"><h2>MATERIALES</h2></div>
+        <div class="slider">
+          <input type="radio" name="slide" id="slide1" />
+          <input type="radio" name="slide" id="slide2" />
+          <input type="radio" name="slide" id="slide3" />
+          <input type="radio" name="slide" id="slide4" />
+          <div class="slider-content slide1">
+            <h3>Drill Pipe</h3>
+            <p>
+              La tubería de perforación <strong>DRILL PIPE</strong> se compone
+              de un tubo sin costuras, grande y pesado que gira sobre el eje del
+              taladro y permite el flujo del líquido.
+            </p>
+            <div class="medidas-container">
+              <div class="medidas">
+                <p><strong>Con medidas desde:</strong></p>
+                <ul>
+                  <li>3 1/2"</li>
+                  <li>5"</li>
+                  <li>6 5/8"</li>
+                </ul>
+              </div>
+              <img
+                class="mat_img1"
+                src="img/drillpipe.png"
+                alt="tubería Drill Pipe"
+              />
+            </div>
+          </div>
+          <div class="slider-content slide2">
+            <h3>LINE PIPE</h3>
+            <p>
+              La tubería de línea permite transportar diferentes tipos de
+              fluidos como agua, aceite, combustible, petróleo, entre otros.
+            </p>
+            <img
+              class="mat_img1"
+              src="img/linepipe_1.png"
+              alt="tubería Drill Pipe"
+            />
+          </div>
+          <div class="slider-content slide3">
+            <h3>BARRAS PERFORADAS</h3>
+            <p>
+              BARRA PERFORADA es un acero de alta resistencia que gracias a su
+              capacidad de ser soldada, se utiiliza en mecanizados.
+            </p>
+            <img
+              class="mat_img1"
+              src="img/barra_1.png"
+              alt="tubería Drill Pipe"
+            />
+          </div>
+          <div class="slider-content slide4">
+            <h3>EJES</h3>
+            <p>
+              La barra de acero al carbono contiene acero bajo en carbono. Es
+              perfecta para usos generales, esta puede aportar una excelente
+              conformabilidad y soldadibilidad.
+            </p>
+            <img
+              class="mat_img1"
+              src="img/ejes_1.png"
+              alt="tubería Drill Pipe"
+            />
+          </div>
+        </div>
+        <div class="dots">
+          <label for="slide1"></label>
+          <label for="slide2"></label>
+          <label for="slide3"></label>
+          <label for="slide4"></label>
         </div>
       </section>
     </main>
