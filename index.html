@@ -53,75 +53,75 @@
         </div>
       </section>
       <section class="materiales" id="materiales">
-        <div class="materiales_title">
-          <h2>MATERIALES</h2>
-        </div>
-        <div class="slider">
-          <input type="radio" name="slide" id="slide1" checked />
-          <input type="radio" name="slide" id="slide2" />
-          <input type="radio" name="slide" id="slide3" />
-          <input type="radio" name="slide" id="slide4" />
-          <div class="slider-content slide1">
-            <h3>Drill Pipe</h3>
-            <p>
-              La tubería de perforación <strong>Drill Pipe</strong> se compone
-              de un tubo sin costuras, grande y pesado que gira sobre el eje del
-              taladro y permite el flujo del líquido.
-            </p>
-            <div class="medidas-container">
-              <div class="medidas">
-                <p><strong>Con medidas desde:</strong></p>
-                <ul>
-                  <li>3 1/2"</li>
-                  <li>5"</li>
-                  <li>6 5/8"</li>
-                </ul>
+        <div class="materiales-container">
+          <h2 class="materiales_title">MATERIALES</h2>
+          <div class="slider">
+            <input type="radio" name="slide" id="slide1" checked />
+            <input type="radio" name="slide" id="slide2" />
+            <input type="radio" name="slide" id="slide3" />
+            <input type="radio" name="slide" id="slide4" />
+            <div class="slider-content slide1">
+              <h3>Drill Pipe</h3>
+              <p>
+                La tubería de perforación <strong>Drill Pipe</strong> se compone
+                de un tubo sin costuras, grande y pesado que gira sobre el eje
+                del taladro y permite el flujo del líquido.
+              </p>
+              <div class="medidas-container">
+                <div class="medidas">
+                  <p><strong>Con medidas desde:</strong></p>
+                  <ul>
+                    <li>3 1/2"</li>
+                    <li>5"</li>
+                    <li>6 5/8"</li>
+                  </ul>
+                </div>
+                <img
+                  class="mat_img"
+                  src="img/drillpipe.png"
+                  alt="tubería Drill Pipe"
+                />
               </div>
+            </div>
+            <div class="slider-content slide2">
+              <h3>LINE PIPE</h3>
+              <p>
+                La <strong>tubería de línea</strong> permite transportar
+                diferentes tipos de fluidos como agua, aceite, combustible,
+                petróleo, entre otros.
+              </p>
               <img
                 class="mat_img"
-                src="img/drillpipe.png"
+                src="img/linepipe_1.png"
                 alt="tubería Drill Pipe"
               />
             </div>
-          </div>
-          <div class="slider-content slide2">
-            <h3>LINE PIPE</h3>
-            <p>
-              La <strong>tubería de línea</strong> permite transportar
-              diferentes tipos de fluidos como agua, aceite, combustible,
-              petróleo, entre otros.
-            </p>
-            <img
-              class="mat_img"
-              src="img/linepipe_1.png"
-              alt="tubería Drill Pipe"
-            />
-          </div>
-          <div class="slider-content slide3">
-            <h3>BARRAS PERFORADAS</h3>
-            <p>
-              <strong>Barra perforadora</strong> es un acero de alta resistencia
-              que gracias a su capacidad de ser soldada, se utiiliza en
-              mecanizados.
-            </p>
-            <img
-              class="mat_img"
-              src="img/barra_1.png"
-              alt="tubería Drill Pipe"
-            />
-          </div>
-          <div class="slider-content slide4">
-            <h3>EJES</h3>
-            <p>
-              La <strong>barra de acero al carbono</strong> es perfecta para
-              usos generales, contiene acero bajo en carbono, esta puede aportar
-              una excelente conformabilidad y soldadibilidad.
-            </p>
-            <img
-              class="mat_img"
-              src="img/ejes_1.png"
-              alt="tubería Drill Pipe"
-            />
+            <div class="slider-content slide3">
+              <h3>BARRAS PERFORADAS</h3>
+              <p>
+                <strong>Barra perforadora</strong> es un acero de alta
+                resistencia que gracias a su capacidad de ser soldada, se
+                utiiliza en mecanizados.
+              </p>
+              <img
+                class="mat_img"
+                src="img/barra_1.png"
+                alt="tubería Drill Pipe"
+              />
+            </div>
+            <div class="slider-content slide4">
+              <h3>EJES</h3>
+              <p>
+                La <strong>barra de acero al carbono</strong> es perfecta para
+                usos generales, contiene acero bajo en carbono, esta puede
+                aportar una excelente conformabilidad y soldadibilidad.
+              </p>
+              <img
+                class="mat_img"
+                src="img/ejes_1.png"
+                alt="tubería Drill Pipe"
+              />
+            </div>
           </div>
         </div>
         <div class="dots">
@@ -186,21 +186,25 @@
             <span>(57) 2 77 44 03</span>
           </div>
         </div>
-        <div class="contact-content_info2">
-          <form class="contact_form">
-            <label for="empresa">Empresa</label>
-            <input type="text" id="empresa" name="user_empresa" />
-            <label for="email">Correo</label>
-            <input type="email" id="email" name="user_email" />
-            <label for="asunto">Asunto</label>
-            <textarea id="asunto" name="user_asunto"></textarea>
-            <button type="submit">Enviar</button>
-          </form>
+        <div class="contact-content-wrapper">
+          <div class="contact-content_info2">
+            <form class="contact_form">
+              <label for="empresa">Empresa</label>
+              <input type="text" id="empresa" name="user_empresa" />
+              <label for="email">Correo</label>
+              <input type="email" id="email" name="user_email" />
+              <label for="asunto">Asunto</label>
+              <textarea id="asunto" name="user_asunto"></textarea>
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
         </div>
-        <div class="contact-content_info3">
-          <h4>Escríbenos por whatsapp</h4>
-          <img src="img/whatsapp.png" alt="whatsapp logo" />
-          <span>Tel. (57) 315 38 30 711</span>
+        <div class="contact-content-wrapper">
+          <div class="contact-content_info3">
+            <h4>Escríbenos por whatsapp</h4>
+            <img src="img/whatsapp.png" alt="whatsapp logo" />
+            <span>Tel. (57) 315 38 30 711</span>
+          </div>
         </div>
       </section>
     </main>
