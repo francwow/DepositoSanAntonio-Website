@@ -66,7 +66,7 @@ a {
 
 a:hover {
   text-decoration: underline;
-  color: rgb(255, 253, 111);
+  color: rgb(140, 255, 106);
 }
 
 label > a:hover {
@@ -230,9 +230,18 @@ label a {
   box-shadow: 0px 3px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
+.about-content-wrapper h2 {
+  margin-bottom: 20px;
+}
+
 .about p {
   font-size: 0.8em;
   line-height: 1.2em;
+  margin-bottom: 0;
+}
+
+.materiales-container-desktop {
+  display: none;
 }
 
 .materiales-container {
@@ -263,7 +272,7 @@ label a {
   z-index: 5;
 }
 
-.materiales_button {
+/* .materiales_button {
   padding: 19px 39px 18px 39px;
   color: #fff;
   background-color: rgb(35, 148, 0);
@@ -277,7 +286,7 @@ label a {
   box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
   margin-bottom: 10px;
   cursor: pointer;
-}
+} */
 
 .slider {
   display: flex;
@@ -378,7 +387,8 @@ label a {
 }
 
 .dots label:hover,
-.dots label:focus-visible {
+.dots label:focus,
+.dots label:active {
   background-color: rgba(65, 64, 64, 1);
 }
 
@@ -922,8 +932,14 @@ label a {
   }
 }
 
+/* WORK IN PROGRESS ------------------------------------------- */
+
 @media screen and (min-width: 992px) {
   /* start of desktop styles */
+
+  .main-line {
+    display: none;
+  }
 
   .main-header {
     font-family: myriad, Verdana, Geneva, Tahoma, sans-serif;
@@ -974,7 +990,7 @@ label a {
   }
 
   .home {
-    background-size: 60%;
+    background-size: 50%;
     border-bottom: none;
   }
 
@@ -993,55 +1009,138 @@ label a {
   }
 
   h2 {
-    font-size: 1.9em;
+    font-size: 2em;
   }
 
   .home-content-wrapper {
-    width: 450px;
+    width: 500px;
   }
   .home-content-wrapper .logo {
-    width: 250px;
+    width: 300px;
   }
   .home-content-wrapper h1 {
-    font-size: 2.5em;
+    font-size: 2.6em;
   }
   .home-content-wrapper p {
-    font-size: 1.4em;
-    line-height: 1.3em;
-  }
-
-  .about-content-wrapper,
-  .slider,
-  .slider1,
-  .slider2,
-  .slider3,
-  .slider4,
-  .contact-content-wrapper {
-    width: 450px;
-  }
-  .about-content-wrapper p,
-  .slider-content p {
-    font-size: 1.2em;
+    font-size: 1.5em;
     line-height: 1.4em;
   }
 
-  .slider {
-    height: 450px;
+  .about-content-wrapper p,
+  .slider-content p {
+    font-size: 1.3em;
+    line-height: 1.4em;
   }
-  .slider h3 {
+
+  .about-content-wrapper {
+    width: 1000px;
+    box-shadow: 0 0 0 0;
+  }
+
+  .materiales-container,
+  .dots {
+    display: none;
+  }
+  .materiales-container-desktop {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 1000px;
+    padding: 20px 20px 0 20px;
+  }
+  .materiales_title {
+    margin: 0;
+  }
+  .materiales-info-desktop {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  .slider-desktop {
+    color: black;
+    flex-basis: 50%;
+    position: relative;
+    width: 500px;
+    height: 500px;
+  }
+  .slider-desktop input {
+    display: none;
+  }
+  .slider-content-desktop {
+    background-color: white;
+    color: rgb(31, 31, 32);
+    margin-top: 120px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    align-items: flex-start;
+    justify-content: start;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+  }
+  .slider-content-desktop p {
     font-size: 1.3em;
   }
-  .medidas ul li {
+  .medidas-desktop ul li {
+    font-family: myriad, Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.3em;
   }
-  .mat_img {
-    width: 90px;
-    height: 170px;
+  .medidas-desktop p {
+    margin: 20px 0;
   }
-  .dots label {
-    width: 60px;
-    height: 60px;
-    margin: 20px;
+  .slide-1 {
+    z-index: 1;
+  }
+  .slide-2 {
+    z-index: 2;
+  }
+  .slide-3 {
+    z-index: 3;
+  }
+  .slide-4 {
+    z-index: 4;
+  }
+  #slide-1:checked ~ .slide-1 {
+    transition: opacity 0.5s ease-in;
+    opacity: 1;
+  }
+  #slide-2:checked ~ .slide-2 {
+    transition: opacity 0.5s ease-in;
+    opacity: 1;
+  }
+  #slide-3:checked ~ .slide-3 {
+    transition: opacity 0.5s ease-in;
+    opacity: 1;
+  }
+  #slide-4:checked ~ .slide-4 {
+    transition: opacity 0.5s ease-in;
+    opacity: 1;
+  }
+  .mat-img-desktop {
+    display: flex;
+    flex-basis: 50%;
+    justify-content: end;
+    align-items: flex-end;
+    position: relative;
+  }
+  .mat-img {
+    width: 100px;
+    height: 200px;
+    margin: 0 5px;
+    transition: height 0.2s ease-out;
+    position: relative;
+  }
+  .mat-img:hover,
+  .mat-img:active,
+  .mat-img:focus {
+    height: 250px;
+    transition: height 0.2s ease-in;
   }
 
   .ofertas {
