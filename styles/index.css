@@ -141,6 +141,7 @@ main {
 }
 
 .main-line {
+  display: none;
   position: fixed;
   border-right: 2px solid white;
   height: 100vh;
@@ -183,11 +184,12 @@ label a {
 /* Sections ------------------------------------------------------------- */
 .home {
   background-image: url(../img/barras.png);
-  background-color: rgba(65, 64, 64, 1);
+  background-color: rgba(31, 31, 32, 0.9);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 85%;
   background-blend-mode: overlay;
+  overflow: hidden;
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -195,6 +197,8 @@ label a {
   justify-content: center;
   align-items: center;
   border-bottom: 2px white solid;
+  margin-bottom: 100px;
+  z-index: 1;
 }
 
 .home-content-wrapper {
@@ -207,9 +211,25 @@ label a {
   justify-content: center;
 }
 
+.wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  z-index: 95;
+}
+
+.wave-svg {
+  width: 100%;
+  fill: white;
+  position: relative;
+  z-index: 96;
+}
+
 .about {
   background-color: white;
   padding: 40px 20px;
+  margin: 50px 0;
   width: 100vw;
   position: relative;
   display: flex;
@@ -246,12 +266,14 @@ label a {
 
 .materiales-container {
   box-shadow: 0px 3px 5px 5px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 98;
 }
 
 .materiales {
   background-color: white;
   width: 100vw;
-  padding: 40px 20px;
+  padding: 40px 20px 0 20px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -373,14 +395,16 @@ label a {
 .dots {
   display: flex;
   justify-content: center;
-  margin: 5px;
+  margin: 10px 10px 200px 10px;
+  position: relative;
+  z-index: 98;
 }
 
 .dots label {
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  border: 3px solid rgba(65, 64, 64, 1);
+  border: 3px solid rgb(31, 31, 32);
   cursor: pointer;
   transition: all 0s ease;
   margin: 5px;
@@ -389,7 +413,7 @@ label a {
 .dots label:hover,
 .dots label:focus,
 .dots label:active {
-  background-color: rgba(65, 64, 64, 1);
+  background-color: rgb(31, 31, 32);
 }
 
 #slide1:checked ~ .slide1 {
@@ -412,8 +436,23 @@ label a {
   opacity: 1;
 }
 
+.wave2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  z-index: 95;
+}
+
+.wave-svg2 {
+  width: 100%;
+  fill: rgb(31, 31, 32);
+  position: relative;
+  z-index: 96;
+}
+
 .ofertas {
-  background-color: rgba(65, 64, 64, 1);
+  background-color: rgb(31, 31, 32);
   width: 100vw;
   padding: 40px 20px;
   position: relative;
@@ -426,6 +465,10 @@ label a {
 
 .ofertas_title {
   margin: 0 0px 30px 0;
+}
+
+.ofertas-content {
+  margin-bottom: 200px;
 }
 
 .ofertas-content-wrapper {
@@ -461,6 +504,7 @@ label a {
   background-color: white;
   width: 100vw;
   padding: 40px 20px;
+  margin-top: 50px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -648,12 +692,15 @@ label a {
   .home {
     background-size: 80%;
   }
+  .wave {
+    bottom: -30px;
+  }
 
   .about,
   .materiales,
   .ofertas,
   .contact {
-    padding: 50px 30px;
+    padding: 50px 30px 0 30px;
   }
 
   h2 {
@@ -706,6 +753,9 @@ label a {
     width: 50px;
     height: 50px;
     margin: 10px;
+  }
+  .wave2 {
+    bottom: -30px;
   }
 
   .ofertas-content-wrapper {
@@ -814,7 +864,7 @@ label a {
   .materiales,
   .ofertas,
   .contact {
-    padding: 60px 40px;
+    padding: 60px 40px 0 40px;
   }
 
   h2 {
@@ -932,8 +982,6 @@ label a {
   }
 }
 
-/* WORK IN PROGRESS ------------------------------------------- */
-
 @media screen and (min-width: 992px) {
   /* start of desktop styles */
 
@@ -943,24 +991,25 @@ label a {
 
   .main-header {
     font-family: myriad, Verdana, Geneva, Tahoma, sans-serif;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.8);
     font-size: 1rem;
     border-radius: 0 0 0 0;
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: initial;
-    right: 10px;
+    right: 0px;
     width: 200px;
     align-items: center;
     justify-content: center;
     z-index: 99;
     transition: 0.5s ease-in-out;
-    box-shadow: none;
+    box-shadow: 0 2px 6px 2px rgba(0, 0, 0, .4);
+    border: solid 2px rgba(0, 0, 0, 0.1);
   }
   .main-header ul {
-    height: 250px;
+    height: 200px;
   }
   .main-header ul li {
     line-height: 1.1em;
@@ -968,14 +1017,6 @@ label a {
   }
   .toggle-label {
     display: none;
-  }
-
-  .main-line {
-    position: fixed;
-    border-right: 2px solid white;
-    height: 100vh;
-    right: 40px;
-    z-index: 98;
   }
 
   .whatsapp {
@@ -998,7 +1039,7 @@ label a {
   .materiales,
   .ofertas,
   .contact {
-    padding: 60px 40px;
+    padding: 60px 40px 0 40px;
   }
 
   .about,
@@ -1026,15 +1067,20 @@ label a {
     line-height: 1.4em;
   }
 
+  .about {
+    margin-bottom: 100px;
+  }
   .about-content-wrapper p,
   .slider-content p {
     font-size: 1.3em;
     line-height: 1.4em;
   }
-
   .about-content-wrapper {
     width: 1000px;
     box-shadow: 0 0 0 0;
+  }
+  .about_img {
+    border-radius: 50%;
   }
 
   .materiales-container,
@@ -1047,6 +1093,8 @@ label a {
     position: relative;
     width: 1000px;
     padding: 20px 20px 0 20px;
+    margin-bottom: 300px;
+    z-index: 98;
   }
   .materiales_title {
     margin: 0;
@@ -1150,7 +1198,7 @@ label a {
   .ofertas-content {
     margin-left: 50px;
     margin-top: 80px;
-    margin-bottom: 100px;
+    margin-bottom: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -1180,6 +1228,7 @@ label a {
   .contact {
     justify-items: center;
     align-items: center;
+    margin: 0;
   }
   .contact-content {
     display: flex;
