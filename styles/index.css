@@ -243,11 +243,10 @@ label a {
   padding: 20px 20px 0 20px;
   display: flex;
   flex-direction: column;
-  width: 250px;
+  width: 280px;
   text-align: start;
   align-items: flex-start;
   justify-content: center;
-  box-shadow: 0px 3px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .about-content-wrapper h2 {
@@ -255,9 +254,10 @@ label a {
 }
 
 .about p {
-  font-size: 0.8em;
+  font-size: 1em;
   line-height: 1.2em;
   margin-bottom: 0;
+  margin-top: 10px;
 }
 
 .materiales-container-desktop {
@@ -265,8 +265,9 @@ label a {
 }
 
 .materiales-container {
-  box-shadow: 0px 3px 5px 5px rgba(0, 0, 0, 0.3);
+  padding: 20px 20px 0 20px;
   position: relative;
+  width: 280px;
   z-index: 98;
 }
 
@@ -290,7 +291,7 @@ label a {
 
 .materiales_title {
   color: black;
-  margin: 20px 20px 0 20px;
+  margin: 0px 0px 20px 0px;
   z-index: 5;
 }
 
@@ -357,7 +358,7 @@ label a {
 }
 
 .slider-content p {
-  font-size: small;
+  font-size: 1em;
 }
 
 .medidas-container {
@@ -1031,7 +1032,7 @@ label a {
   }
 
   .home {
-    background-size: 50%;
+    background-size: 70%;
     border-bottom: none;
   }
 
@@ -1282,5 +1283,29 @@ label a {
   .contact-content_info3 img {
     width: 150px;
     height: 150px;
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  /* Background Img adjustments */
+  .home {
+    background-size: 60%;
+    border-bottom: none;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  /* Background Img adjustments */
+  .home {
+    background-size: 50%;
+    border-bottom: none;
+  }
+}
+
+@media screen and (min-width: 1590px) {
+  /* Background Img adjustments */
+  .home {
+    background-size: 40%;
+    border-bottom: none;
   }
 }
