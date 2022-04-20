@@ -100,6 +100,7 @@ body::-webkit-scrollbar-track {
 
 main {
   position: relative;
+  background-color: rgb(31, 31, 32);
 }
 
 /* Header ------------------------------------------------------------- */
@@ -184,7 +185,7 @@ label a {
 /* Sections ------------------------------------------------------------- */
 .home {
   background-image: url(../img/barras.png);
-  background-color: rgba(31, 31, 32, 0.9);
+  background-color: rgba(54, 54, 54, 0.9);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 85%;
@@ -229,7 +230,7 @@ label a {
 .about {
   background-color: white;
   padding: 40px 20px;
-  margin: 50px 0;
+  margin: -100px 0 0 0;
   width: 100vw;
   position: relative;
   display: flex;
@@ -272,9 +273,10 @@ label a {
 }
 
 .materiales {
-  background-color: white;
+  background-color: rgb(31, 31, 32);
   width: 100vw;
   padding: 40px 20px 0 20px;
+  margin-top: -30px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -290,7 +292,7 @@ label a {
 }
 
 .materiales_title {
-  color: black;
+  color: white;
   margin: 0px 0px 20px 0px;
   z-index: 5;
 }
@@ -318,12 +320,12 @@ label a {
   position: relative;
   overflow: hidden;
   width: 250px;
-  height: 350px;
+  height: 390px;
 }
 
 .slider-content {
-  background-color: white;
-  color: rgb(31, 31, 32);
+  background-color: rgb(31, 31, 32);
+  color: white;
   padding: 20px 20px 0 20px;
   margin-top: 20px;
   position: absolute;
@@ -338,7 +340,7 @@ label a {
   align-items: flex-start;
   justify-content: center;
   opacity: 0;
-  transition: opacity 0.5s ease-in;
+  transition: opacity 0.1s ease-in;
 }
 
 .slide1 {
@@ -358,7 +360,11 @@ label a {
 }
 
 .slider-content p {
-  font-size: 1em;
+  font-size: 1.1em;
+}
+
+.slider h3 {
+  font-size: 1.3em;
 }
 
 .medidas-container {
@@ -402,10 +408,10 @@ label a {
 }
 
 .dots label {
-  height: 40px;
-  width: 40px;
+  height: 55px;
+  width: 55px;
   border-radius: 50%;
-  border: 3px solid rgb(31, 31, 32);
+  border: 3px solid white;
   cursor: pointer;
   transition: all 0s ease;
   margin: 5px;
@@ -414,26 +420,26 @@ label a {
 .dots label:hover,
 .dots label:focus,
 .dots label:active {
-  background-color: rgb(31, 31, 32);
+  background-color: white;
 }
 
 #slide1:checked ~ .slide1 {
-  transition: opacity 0.5s ease-in;
+  transition: opacity 0.1s ease-in;
   opacity: 1;
 }
 
 #slide2:checked ~ .slide2 {
-  transition: opacity 0.5s ease-in;
+  transition: opacity 0.1s ease-in;
   opacity: 1;
 }
 
 #slide3:checked ~ .slide3 {
-  transition: opacity 0.5s ease-in;
+  transition: opacity 0.1s ease-in;
   opacity: 1;
 }
 
 #slide4:checked ~ .slide4 {
-  transition: opacity 0.5s ease-in;
+  transition: opacity 0.1s ease-in;
   opacity: 1;
 }
 
@@ -441,7 +447,7 @@ label a {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -10px;
+  bottom: 25px;
   z-index: 95;
 }
 
@@ -453,9 +459,10 @@ label a {
 }
 
 .ofertas {
-  background-color: rgb(31, 31, 32);
+  background-color: white;
   width: 100vw;
   padding: 40px 20px;
+  margin-top: -30px;
   position: relative;
   display: flex;
   flex-grow: 1;
@@ -466,6 +473,7 @@ label a {
 
 .ofertas_title {
   margin: 0 0px 30px 0;
+  color: rgb(31, 31, 32);
 }
 
 .ofertas-content {
@@ -473,8 +481,8 @@ label a {
 }
 
 .ofertas-content-wrapper {
-  background-color: white;
-  color: rgb(31, 31, 32);
+  background-color: rgb(31, 31, 32);
+  color: white;
   padding: 20px 20px 0 20px;
   position: relative;
   display: flex;
@@ -502,7 +510,7 @@ label a {
 }
 
 .contact {
-  background-color: white;
+  background-color: rgb(31, 31, 32);
   width: 100vw;
   padding: 40px 20px;
   margin-top: 50px;
@@ -527,14 +535,14 @@ label a {
 }
 
 .contact_title {
-  color: black;
+  color: white;
   margin: 0 0px 30px 0;
 }
 
 .contact-content_info1 {
   background-image: url(../img/img_worker.JPG);
-  background-color: rgba(0, 0, 0, 0.7);
-  background-blend-mode: multiply;
+  background-color: rgba(54, 54, 54, 0.9);
+  background-blend-mode:overlay;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -733,15 +741,22 @@ label a {
   }
   .about-content-wrapper p,
   .slider-content p {
-    font-size: 1.1em;
+    font-size: 1.3em;
     line-height: 1.3em;
   }
 
+  .materiales {
+    margin-top: 0px;
+  }
+  .materiales-container {
+    width: 380px;
+  }
   .slider {
-    height: 400px;
+    padding: 0 20px;
+    height: 450px;
   }
   .slider h3 {
-    font-size: 1.2em;
+    font-size: 1.5em;
   }
   .medidas ul li {
     font-size: 1.2em;
@@ -759,6 +774,9 @@ label a {
     bottom: -30px;
   }
 
+  .ofertas {
+    margin-top: 0px;
+  }
   .ofertas-content-wrapper {
     width: 300px;
     height: 300px;
@@ -897,15 +915,18 @@ label a {
   }
   .about-content-wrapper p,
   .slider-content p {
-    font-size: 1.2em;
+    font-size: 1.3em;
     line-height: 1.4em;
   }
 
+  .materiales-container {
+    width: 470px;
+  }
   .slider {
     height: 450px;
   }
   .slider h3 {
-    font-size: 1.3em;
+    font-size: 1.6em;
   }
   .medidas ul li {
     font-size: 1.3em;
@@ -1069,11 +1090,11 @@ label a {
   }
 
   .about {
-    margin-bottom: 100px;
+    margin-bottom: 0;
   }
   .about-content-wrapper p,
   .slider-content p {
-    font-size: 1.3em;
+    font-size: 1.4em;
     line-height: 1.4em;
   }
   .about-content-wrapper {
@@ -1083,7 +1104,13 @@ label a {
   .about_img {
     border-radius: 50%;
   }
+  .wave2 {
+    bottom: 30px;
+  }
 
+  .materiales {
+    margin-top: -35px;
+  }
   .materiales-container,
   .dots {
     display: none;
@@ -1106,18 +1133,20 @@ label a {
     position: relative;
   }
   .slider-desktop {
-    color: black;
+    color: white;
     flex-basis: 50%;
     position: relative;
     width: 500px;
     height: 500px;
   }
+  .slider-desktop h3 {
+    font-size: 1.6em;
+  }
   .slider-desktop input {
     display: none;
   }
   .slider-content-desktop {
-    background-color: white;
-    color: rgb(31, 31, 32);
+    background-color: rgb(31, 31, 32);
     margin-top: 120px;
     position: absolute;
     top: 0;
@@ -1131,7 +1160,7 @@ label a {
     align-items: flex-start;
     justify-content: start;
     opacity: 0;
-    transition: opacity 0.5s ease-in;
+    transition: opacity 0.2s ease-in;
   }
   .slider-content-desktop p {
     font-size: 1.3em;
@@ -1156,19 +1185,19 @@ label a {
     z-index: 4;
   }
   #slide-1:checked ~ .slide-1 {
-    transition: opacity 0.5s ease-in;
+    transition: opacity 0.2s ease-in;
     opacity: 1;
   }
   #slide-2:checked ~ .slide-2 {
-    transition: opacity 0.5s ease-in;
+    transition: opacity 0.2s ease-in;
     opacity: 1;
   }
   #slide-3:checked ~ .slide-3 {
-    transition: opacity 0.5s ease-in;
+    transition: opacity 0.2s ease-in;
     opacity: 1;
   }
   #slide-4:checked ~ .slide-4 {
-    transition: opacity 0.5s ease-in;
+    transition: opacity 0.2s ease-in;
     opacity: 1;
   }
   .mat-img-desktop {
@@ -1177,6 +1206,26 @@ label a {
     justify-content: end;
     align-items: flex-end;
     position: relative;
+  }
+  .img-label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .label-description {
+    margin-top: 10px;
+    color: white;
+    opacity: 0;
+    transition: opacity .2s ease-in;
+    font-family: myriad;
+  }
+  .img-label:hover > span,
+  .img-label:focus > span,
+  .img-label:active > span {
+    opacity: 1;
+    transition: opacity .2s ease-in;
   }
   .mat-img {
     width: 100px;
@@ -1195,6 +1244,7 @@ label a {
   .ofertas {
     justify-items: center;
     align-items: center;
+    margin-top: -35px;
   }
   .ofertas-content {
     margin-left: 50px;
