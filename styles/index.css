@@ -218,7 +218,7 @@ label a {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -10px;
+  bottom: -20px;
   z-index: 95;
 }
 
@@ -278,7 +278,7 @@ label a {
   background-color: rgb(31, 31, 32);
   width: 100vw;
   padding: 80px 20px 0 20px;
-  margin-top: -50px;
+  margin-top: -40px;
   position: relative;
   display: flex;
   flex-direction: column;
