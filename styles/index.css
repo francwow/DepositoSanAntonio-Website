@@ -232,7 +232,7 @@ label a {
 .about {
   background-color: white;
   padding: 80px 20px 40px 20px;
-  margin: -100px 0 0 0;
+  margin: -120px 0 0 0;
   width: 100vw;
   position: relative;
   display: flex;
@@ -278,7 +278,7 @@ label a {
   background-color: rgb(31, 31, 32);
   width: 100vw;
   padding: 80px 20px 0 20px;
-  margin-top: -30px;
+  margin-top: -50px;
   position: relative;
   display: flex;
   flex-direction: column;
