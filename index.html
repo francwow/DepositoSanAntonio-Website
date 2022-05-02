@@ -14,11 +14,21 @@
         <input type="checkbox" id="header-toggle" class="header-toggle" />
         <div class="main-header">
           <ul>
-            <li><a class="header_nav" href="#home">Principal</a></li>
-            <li><a class="header_nav" href="#about">Nosotros</a></li>
-            <li><a class="header_nav" href="#materiales">Materiales</a></li>
-            <li><a class="header_nav" href="#ofertas">Ofertas</a></li>
-            <li><a class="header_nav" href="#contact">Contacto</a></li>
+            <li class="main-li">
+              <a class="header_nav" href="#home"><span></span>Principal</a>
+            </li>
+            <li>
+              <a class="header_nav" href="#about">Nosotros</a>
+            </li>
+            <li>
+              <a class="header_nav" href="#materiales">Materiales</a>
+            </li>
+            <li>
+              <a class="header_nav" href="#ofertas">Ofertas</a>
+            </li>
+            <li>
+              <a class="header_nav" href="#contact">Contacto</a>
+            </li>
           </ul>
           <label class="toggle-label" for="header-toggle"><a></a></label>
         </div>
@@ -28,7 +38,7 @@
         <div class="home-content-wrapper">
           <img
             class="logo"
-            src="img/logo_placeholder.png"
+            src="img/logo-final.png"
             alt="Logo Deposito San Antonio E Hijos"
           />
           <h1>Depósito San Antonio E Hijos S.A.S</h1>
@@ -47,7 +57,7 @@
       </section>
       <section class="about" id="about">
         <div class="about-content-wrapper">
-          <h2>Nosotros</h2>
+          <h2 class="header-moves">Nosotros</h2>
           <p>
             Nos caracterizamos por brindar un servicio de calidad con precios
             más asequibles para nuestros clientes, contribuyendo al desarrollo
@@ -69,7 +79,7 @@
       <section class="materiales" id="materiales">
         <div class="materiales-container-desktop">
           <div class="materiales_title-desktop">
-            <h2 class="materiales_title">MATERIALES</h2>
+            <h2 class="materiales_title header-moves">MATERIALES</h2>
           </div>
           <div class="materiales-info-desktop">
             <div class="slider-desktop">
@@ -161,7 +171,7 @@
           </div>
         </div>
           <div class="materiales-container">
-            <h2 class="materiales_title">MATERIALES</h2>
+            <h2 class="materiales_title header-moves">MATERIALES</h2>
             <div class="slider">
               <input type="radio" name="slide" id="slide1" checked />
               <input type="radio" name="slide" id="slide2" />
@@ -243,43 +253,72 @@
       </section>
       <section class="ofertas" id="ofertas">
         <div class="ofertas-content">
-          <div class="ofertas_title"><h2>OFERTAS</h2></div>
-          <div class="ofertas-content-container">
-            <div class="ofertas-content-wrapper">
-              <img class="ofertas_img" src="img/6.png" alt="tubería" />
-              <h4 class="ofertas_info">Codos y Flanches</h4>
-            </div>
-            <div class="ofertas-content-wrapper">
-              <img class="ofertas_img" src="img/4.png" alt="tubería" />
-              <h4 class="ofertas_info">Centralizadores</h4>
-            </div>
-            <div class="ofertas-content-wrapper">
-              <img class="ofertas_img" src="img/5.png" alt="tubería" />
-              <h4 class="ofertas_info">Centralizadores</h4>
-            </div>
-            <div class="ofertas-content-wrapper">
-              <img class="ofertas_img" src="img/1.png" alt="tubería" />
-              <h4 class="ofertas_info">Válvulas</h4>
-            </div>
-            <div class="ofertas-content-wrapper">
-              <img class="ofertas_img" src="img/2.png" alt="tubería" />
-              <h4 class="ofertas_info">Polipasto</h4>
-            </div>
-            <div class="ofertas-content-wrapper">
-              <img class="ofertas_img" src="img/3.png" alt="tubería" />
-              <h4 class="ofertas_info">Cabezal</h4>
-            </div>
-            <div class="ofertas-content-wrapper">
-              <img class="ofertas_img" src="img/7.png" alt="tubería" />
-              <h4 class="ofertas_info">Tuercas</h4>
-            </div>
-            <div class="ofertas-content-wrapper">
-              <img class="ofertas_img" src="img/8.png" alt="tubería" />
-              <h4 class="ofertas_info">Camisas Hidráulicas</h4>
-            </div>
-            <div class="ofertas-content-wrapper">
-              <img class="ofertas_img" src="img/9.png" alt="tubería" />
-              <h4 class="ofertas_info">Bomba Centrífuga</h4>
+          <div class="ofertas_title header-moves"><h2>OFERTAS</h2></div>
+          <div class="ofertas-content-box">
+            <div class="ofertas-content-container">
+              <div class="ofertas-content-wrapper">
+                <div class="ofertas-hover">
+                  <button name="ofertas-button" class="ofertas-button"><a>Realizar Oferta</a></button>
+                </div>
+                <img class="ofertas_img" src="img/6.png" alt="tubería" />
+                <h4 class="ofertas_info">Codos y Flanches</h4>
+              </div>
+              <div class="ofertas-content-wrapper">
+                <div class="ofertas-hover">
+                  <button name="ofertas-button" class="ofertas-button"><a>Realizar Oferta</a></button>
+                </div>
+                <img class="ofertas_img" src="img/4.png" alt="tubería" />
+                <h4 class="ofertas_info">Centralizadores</h4>
+              </div>
+              <div class="ofertas-content-wrapper">
+                <div class="ofertas-hover">
+                  <button name="ofertas-button" class="ofertas-button"><a>Realizar Oferta</a></button>
+                </div>
+                <img class="ofertas_img" src="img/5.png" alt="tubería" />
+                <h4 class="ofertas_info">Centralizadores</h4>
+              </div>
+              <div class="ofertas-content-wrapper">
+                <div class="ofertas-hover">
+                  <button name="ofertas-button" class="ofertas-button"><a>Realizar Oferta</a></button>
+                </div>
+                <img class="ofertas_img" src="img/1.png" alt="tubería" />
+                <h4 class="ofertas_info">Válvulas</h4>
+              </div>
+              <div class="ofertas-content-wrapper">
+                <div class="ofertas-hover">
+                  <button name="ofertas-button" class="ofertas-button"><a>Realizar Oferta</a></button>
+                </div>
+                <img class="ofertas_img" src="img/2.png" alt="tubería" />
+                <h4 class="ofertas_info">Polipasto</h4>
+              </div>
+              <div class="ofertas-content-wrapper">
+                <div class="ofertas-hover">
+                  <button name="ofertas-button" class="ofertas-button"><a>Realizar Oferta</a></button>
+                </div>
+                <img class="ofertas_img" src="img/3.png" alt="tubería" />
+                <h4 class="ofertas_info">Cabezal</h4>
+              </div>
+              <div class="ofertas-content-wrapper">
+                <div class="ofertas-hover">
+                  <button name="ofertas-button" class="ofertas-button"><a>Realizar Oferta</a></button>
+                </div>
+                <img class="ofertas_img" src="img/7.png" alt="tubería" />
+                <h4 class="ofertas_info">Tuercas</h4>
+              </div>
+              <div class="ofertas-content-wrapper">
+                <div class="ofertas-hover">
+                  <button name="ofertas-button" class="ofertas-button"><a>Realizar Oferta</a></button>
+                </div>
+                <img class="ofertas_img" src="img/8.png" alt="tubería" />
+                <h4 class="ofertas_info">Camisas Hidráulicas</h4>
+              </div>
+              <div class="ofertas-content-wrapper">
+                <div class="ofertas-hover">
+                  <button name="ofertas-button" class="ofertas-button"><a>Realizar Oferta</a></button>
+                </div>
+                <img class="ofertas_img" src="img/9.png" alt="tubería" />
+                <h4 class="ofertas_info">Bomba Centrífuga</h4>
+              </div>
             </div>
           </div>
         </div>
@@ -293,13 +332,13 @@
       </section>
       <section class="contact" id="contact">
         <div class="contact-content">
-          <div class="contact_title"><h2>CONTACTO</h2></div>
+          <div class="contact_title header-moves"><h2>CONTACTO</h2></div>
           <div class="contact-content-container">
             <div class="contact-content-wrapper">
               <div class="contact-content_info1">
                 <img
-                  class="logo"
-                  src="img/logo_placeholder.png"
+                  class="contact-logo"
+                  src="img/logo-final.png"
                   alt="Logo Deposito San Antonio E Hijos"
                 />
                 <h4>Deposito San Antonio e hijos S.A.S</h4>
@@ -333,6 +372,22 @@
         </div>
       </section>
     </main>
+    <input type="checkbox" id="modal" class="modal-toggle">
+    <input type="checkbox" id="modal" class="modal-toggle-close">
+    <div class="ofertas-modal-active">
+      <span class="modal-close"></span>
+      <div class="ofertas-form-container">
+        <form class="ofertas-form">
+          <label for="cantidad">Cantidad</label>
+          <input type="text" id="cantidad" name="user_cantidad" />
+          <label for="precio">Precio</label>
+          <input id="precio" name="user_precio">
+          <label for="email">Correo</label>
+          <input type="email" id="email" name="user_email" />
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
     <footer>
     </footer>
   </body>

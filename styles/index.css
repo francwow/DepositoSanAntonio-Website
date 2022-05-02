@@ -131,6 +131,7 @@ main {
   padding: 10px 10px;
   list-style: none;
   text-align: start;
+  display: flex;
 }
 
 .main-header a {
@@ -188,7 +189,7 @@ label a {
   background-color: rgba(54, 54, 54, 0.9);
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: 85%;
+  background-size: 95%;
   background-blend-mode: overlay;
   overflow: hidden;
   width: 100vw;
@@ -229,7 +230,7 @@ label a {
 
 .about {
   background-color: white;
-  padding: 40px 20px;
+  padding: 80px 20px 40px 20px;
   margin: -100px 0 0 0;
   width: 100vw;
   position: relative;
@@ -275,7 +276,7 @@ label a {
 .materiales {
   background-color: rgb(31, 31, 32);
   width: 100vw;
-  padding: 40px 20px 0 20px;
+  padding: 80px 20px 0 20px;
   margin-top: -30px;
   position: relative;
   display: flex;
@@ -461,7 +462,7 @@ label a {
 .ofertas {
   background-color: white;
   width: 100vw;
-  padding: 40px 20px;
+  padding: 80px 20px 40px 20px;
   margin-top: -30px;
   position: relative;
   display: flex;
@@ -498,6 +499,166 @@ label a {
   box-shadow: 0px 3px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
+/* MODAL TOGGLE PLACEHOLDER */
+.modal-toggle {
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  background-color: black;
+  z-index: 99;
+}
+
+.modal-toggle:checked ~ .ofertas-modal-active {
+  visibility: visible;
+}
+
+.modal-toggle-close {
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  z-index: 9999;
+}
+
+.modal-toggle-close:checked ~ .ofertas-modal-active {
+  visibility: hidden;
+}
+/* END OF MODAL TOGGLE PLACEHOLDER */
+
+.ofertas-content-wrapper:hover .ofertas-hover {
+  bottom: 0;
+  opacity: 1;
+  transition: bottom .5s ease-in-out, opacity .3s ease-in;
+}
+
+.ofertas-hover {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(23, 24, 33, 0.8);
+  transition: bottom .5s ease-in-out, opacity .3s ease-in;
+}
+
+.ofertas-button {
+  background-color: rgb(35, 148, 0);
+  border: 0;
+  border-radius: 30px;
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.ofertas-button:hover {
+  background-color: rgb(38, 160, 0);
+}
+
+.ofertas-button a {
+  text-decoration: none;
+  font-family: myriad, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.ofertas-button:hover a {
+  color:white;
+}
+
+.ofertas-modal-active {
+  visibility: hidden;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(89, 89, 89, 0.6);
+  z-index: 999;
+}
+
+.modal-close {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  background: white;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.modal-close::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  height: 2px;
+  width: 50%;
+  transform: rotate(45deg);
+  background-color: rgb(43, 43, 43);
+}
+
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  height: 2px;
+  width: 50%;
+  transform: rotate(-45deg);
+  background-color: rgb(43, 43, 43);
+}
+
+.ofertas-form {
+  width: 300px;
+  margin: 10px auto;
+  padding: 20px 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
+  font-family: myriad, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.ofertas-form label {
+  font-family: myriad, Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.ofertas-form input {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 10px 0 30px 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #606060;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+}
+
+.ofertas-form button {
+  padding: 19px 39px 18px 39px;
+  color: #fff;
+  background-color: rgb(35, 148, 0);
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid rgb(0, 90, 30);
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
 .ofertas_img {
   width: 100px;
 }
@@ -512,7 +673,7 @@ label a {
 .contact {
   background-color: rgb(31, 31, 32);
   width: 100vw;
-  padding: 40px 20px;
+  padding: 80px 20px 40px 20px;
   margin-top: 50px;
   position: relative;
   display: flex;
@@ -620,6 +781,7 @@ label a {
 
 .contact_form label {
   font-family: myriad, Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
 }
 
 .contact_form input,
@@ -633,7 +795,7 @@ label a {
   padding: 15px;
   width: 100%;
   background-color: #e8eeef;
-  color: #8a97a0;
+  color: #606060;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
   margin-bottom: 30px;
 }
@@ -671,8 +833,30 @@ label a {
 }
 
 .logo {
+  width: 250px;
+}
+
+.contact-logo {
   width: 150px;
 }
+
+.header-moves {
+  transform: translateX(-200px);
+  transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+  opacity: 0;
+}
+
+.about-content-wrapper:hover  .header-moves,
+.materiales-container-desktop:hover .header-moves,
+.materiales-container:hover .header-moves,
+.ofertas-content:hover .header-moves,
+.contact-content:hover .header-moves {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 2s ease-in-out, opacity 2s ease-in-out;
+}
+
+
 
 /* Media Queries -------------------------------- */
 
@@ -699,7 +883,7 @@ label a {
   }
 
   .home {
-    background-size: 80%;
+    background-size: 95%;
   }
   .wave {
     bottom: -30px;
@@ -720,7 +904,7 @@ label a {
     width: 350px;
   }
   .home-content-wrapper .logo {
-    width: 200px;
+    width: 300px;
   }
   .home-content-wrapper h1 {
     font-size: 2.3em;
@@ -785,6 +969,9 @@ label a {
   .ofertas_title {
     margin: 20px 0px 30px 0;
   }
+  .ofertas-form {
+    width: 400px;
+  }
   .ofertas_img {
     width: 150px;
   }
@@ -838,6 +1025,9 @@ label a {
     font-size: 1.5em;
     margin: 40px 0;
   }
+  .contact-logo {
+    width: 200px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -890,11 +1080,14 @@ label a {
     font-size: 1.9em;
   }
 
+  .home {
+    background-size: 85%;
+  }
   .home-content-wrapper {
     width: 450px;
   }
   .home-content-wrapper .logo {
-    width: 250px;
+    width: 350px;
   }
   .home-content-wrapper h1 {
     font-size: 2.5em;
@@ -1002,6 +1195,9 @@ label a {
     font-size: 1.7em;
     margin: 50px 0;
   }
+  .contact-logo {
+    width: 250px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -1013,34 +1209,82 @@ label a {
 
   .main-header {
     font-family: myriad, Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgb(18, 18, 18);
     font-size: 1rem;
-    border-radius: 0 0 0 0;
+    border-radius: 0 0 100px 100px;
     display: flex;
     flex-direction: column;
     position: fixed;
+    height: 70px;
     top: 0;
-    left: initial;
-    right: 0px;
-    width: 200px;
+    left: 0;
+    right: 0;
+    width: 777px;
+    margin: auto;
     align-items: center;
     justify-content: center;
     z-index: 99;
     transition: 0.5s ease-in-out;
-    box-shadow: 0 2px 6px 2px rgba(0, 0, 0, .4);
-    border: solid 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 4px 2px rgba(0, 0, 0, 0.3);
+    border: none;
+  }
+  .main-header a {
+    color: white;
+    text-decoration: none;
+  }
+  .main-header a:hover {
+    font-weight: 500;
   }
   .main-header ul {
-    height: 200px;
+    width: 50%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
   }
   .main-header ul li {
     line-height: 1.1em;
     font-size: 1.2em;
+    align-items: center;
+    position: relative;
+    height: 70px;
+  }
+  .main-header a::before {
+    content: "";
+    position: absolute;
+    top: 80%;
+    left: 0;
+    right: 0;
+    display: block;
+    transform: scale(0,1);
+    transform-origin: left;
+    transition: transform .3s ease-in;
+    height: 5px;
+    background-color: rgb(35, 148, 0);
+  }
+  .main-header a::after {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    display: block;
+    transform: scale(0,1);
+    transform-origin: right;
+    transition: transform .3s ease-in;
+    height: 5px;
+    background-color: rgb(35, 148, 0);
+  }
+  .main-header a:hover::before,
+  .main-header a:hover::after {
+    transform: scale(1,1);
+    transition: transform .3s ease-in;
   }
   .toggle-label {
     display: none;
   }
-
+ 
+  
   .whatsapp {
     display: flex;
     position: fixed;
@@ -1055,6 +1299,7 @@ label a {
   .home {
     background-size: 70%;
     border-bottom: none;
+    height: 105vh;
   }
 
   .about,
@@ -1068,7 +1313,7 @@ label a {
   .materiales,
   .contact {
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
   }
 
   h2 {
@@ -1091,6 +1336,7 @@ label a {
 
   .about {
     margin-bottom: 0;
+    padding-bottom: 20px;
   }
   .about-content-wrapper p,
   .slider-content p {
@@ -1098,6 +1344,7 @@ label a {
     line-height: 1.4em;
   }
   .about-content-wrapper {
+    margin-top: 80px;
     width: 1000px;
     box-shadow: 0 0 0 0;
   }
@@ -1105,11 +1352,11 @@ label a {
     border-radius: 50%;
   }
   .wave2 {
-    bottom: 30px;
+    bottom: 50px;
   }
 
   .materiales {
-    margin-top: -35px;
+    margin-top: -70px;
   }
   .materiales-container,
   .dots {
@@ -1121,7 +1368,8 @@ label a {
     position: relative;
     width: 1000px;
     padding: 20px 20px 0 20px;
-    margin-bottom: 300px;
+    margin-bottom: 50px;
+    margin-top: -100px;
     z-index: 98;
   }
   .materiales_title {
@@ -1147,7 +1395,7 @@ label a {
   }
   .slider-content-desktop {
     background-color: rgb(31, 31, 32);
-    margin-top: 120px;
+    margin-top: 50px;
     position: absolute;
     top: 0;
     right: 0;
@@ -1244,35 +1492,49 @@ label a {
   .ofertas {
     justify-items: center;
     align-items: center;
-    margin-top: -35px;
+    margin-top: -80px;
   }
   .ofertas-content {
     margin-left: 50px;
-    margin-top: 80px;
-    margin-bottom: 400px;
+    margin-top: 50px;
+    margin-bottom: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+  }
+  .ofertas-content-box {
+    display: flex;
+    position: relative;
+    justify-content: center;
   }
   .ofertas-content-container {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 1.5vw;
+    gap: 2vw;
+    width: 65%;
   }
   .ofertas-content-wrapper {
-    flex-basis: 30%;
     margin: 0 0 40px;
+    flex-basis: 30%;
+    height: 300px;
+  }
+  .ofertas-form {
+    width: 500px;
+  }
+  .ofertas-form label {
+    font-size: 1.2em;
   }
   .ofertas_title {
-    margin: 40px 0;
+    margin: 100px 0;
+    margin-left: 16vw;
   }
   .ofertas_img {
-    width: 250px;
+    width: 150px;
   }
   .ofertas_info {
-    font-size: 1.6em;
+    font-size: 1.4em;
     bottom: 20px;
   }
 
@@ -1333,6 +1595,9 @@ label a {
   .contact-content_info3 img {
     width: 150px;
     height: 150px;
+  }
+  .contact-logo {
+    width: 250px;
   }
 }
 
