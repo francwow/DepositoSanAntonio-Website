@@ -66,7 +66,7 @@ a {
 
 a:hover {
   text-decoration: underline;
-  color: rgb(140, 255, 106);
+  color: white;
 }
 
 label > a:hover {
@@ -115,6 +115,7 @@ main {
   top: 0;
   left: -170px;
   width: 200px;
+  margin-top: 10px;
   align-items: center;
   justify-content: center;
   z-index: 99;
@@ -206,7 +207,7 @@ label a {
 .home-content-wrapper {
   display: flex;
   flex-direction: column;
-  width: 250px;
+  width: 300px;
   position: absolute;
   text-align: center;
   align-items: center;
@@ -242,10 +243,10 @@ label a {
 .about-content-wrapper {
   background-color: white;
   color: rgb(31, 31, 32);
-  padding: 20px 20px 0 20px;
+  padding: 20px 0 0 0;
   display: flex;
   flex-direction: column;
-  width: 280px;
+  width: 300px;
   text-align: start;
   align-items: flex-start;
   justify-content: center;
@@ -267,9 +268,9 @@ label a {
 }
 
 .materiales-container {
-  padding: 20px 20px 0 20px;
+  padding: 20px 0 0 0;
   position: relative;
-  width: 280px;
+  width: 300px;
   z-index: 98;
 }
 
@@ -298,36 +299,22 @@ label a {
   z-index: 5;
 }
 
-/* .materiales_button {
-  padding: 19px 39px 18px 39px;
-  color: #fff;
-  background-color: rgb(35, 148, 0);
-  font-size: 18px;
-  text-align: center;
-  font-style: normal;
-  border-radius: 5px;
-  width: 100%;
-  border: 1px solid rgb(0, 90, 30);
-  border-width: 1px 1px 3px;
-  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-  margin-bottom: 10px;
-  cursor: pointer;
-} */
-
 .slider {
   display: flex;
   flex-direction: row;
   flex-grow: 1;
+  justify-content: center;
+  align-items: center;
   position: relative;
   overflow: hidden;
-  width: 250px;
+  width: 300px;
   height: 390px;
 }
 
 .slider-content {
   background-color: rgb(31, 31, 32);
   color: white;
-  padding: 20px 20px 0 20px;
+  padding: 20px 0 0 0;
   margin-top: 20px;
   position: absolute;
   top: 0;
@@ -403,19 +390,19 @@ label a {
 .dots {
   display: flex;
   justify-content: center;
-  margin: 10px 10px 200px 10px;
+  margin: 15px 15px 200px 15px;
   position: relative;
   z-index: 98;
 }
 
 .dots label {
-  height: 55px;
-  width: 55px;
+  height: 65px;
+  width: 65px;
   border-radius: 50%;
   border: 3px solid white;
   cursor: pointer;
   transition: all 0s ease;
-  margin: 5px;
+  margin: 10px;
 }
 
 .dots label:hover,
@@ -475,10 +462,15 @@ label a {
 .ofertas_title {
   margin: 0 0px 30px 0;
   color: rgb(31, 31, 32);
+  width: 85%;
 }
 
 .ofertas-content {
   margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .ofertas-content-wrapper {
@@ -620,6 +612,22 @@ label a {
   background: #f4f7f8;
   border-radius: 8px;
   font-family: myriad, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.ofertas-form-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  width: 100px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.ofertas-form span {
+  margin-top: 10px;
+  color: black;
 }
 
 .ofertas-form label {
@@ -950,9 +958,9 @@ label a {
     height: 160px;
   }
   .dots label {
-    width: 50px;
-    height: 50px;
-    margin: 10px;
+    width: 75px;
+    height: 75px;
+    margin: 15px;
   }
   .wave2 {
     bottom: -30px;
@@ -1129,8 +1137,8 @@ label a {
     height: 170px;
   }
   .dots label {
-    width: 60px;
-    height: 60px;
+    width: 90px;
+    height: 90px;
     margin: 20px;
   }
 
@@ -1469,6 +1477,11 @@ label a {
     transition: opacity .2s ease-in;
     font-family: myriad;
   }
+  .label-description::after {
+    content: "";
+    border-bottom: 2px solid rgb(35, 148, 0);
+    display: block;
+  }
   .img-label:hover > span,
   .img-label:focus > span,
   .img-label:active > span {
@@ -1495,7 +1508,6 @@ label a {
     margin-top: -80px;
   }
   .ofertas-content {
-    margin-left: 50px;
     margin-top: 50px;
     margin-bottom: 300px;
     display: flex;
@@ -1523,12 +1535,14 @@ label a {
   .ofertas-form {
     width: 500px;
   }
+  .ofertas-form-img {
+    width: 150px;
+  }
   .ofertas-form label {
     font-size: 1.2em;
   }
   .ofertas_title {
     margin: 100px 0;
-    margin-left: 16vw;
   }
   .ofertas_img {
     width: 150px;
