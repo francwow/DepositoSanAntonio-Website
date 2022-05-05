@@ -267,11 +267,19 @@ label a {
   display: none;
 }
 
+.materiales-divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
 .materiales-container {
   padding: 20px 0 0 0;
+  margin: 5px 5px 0 5px;
   position: relative;
-  width: 300px;
-  z-index: 98;
+  width: 230px;
+  z-index: 90;
 }
 
 .materiales {
@@ -307,8 +315,7 @@ label a {
   align-items: center;
   position: relative;
   overflow: hidden;
-  width: 300px;
-  height: 390px;
+  height: 400px;
 }
 
 .slider-content {
@@ -348,7 +355,7 @@ label a {
 }
 
 .slider-content p {
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 .slider h3 {
@@ -389,15 +396,17 @@ label a {
 
 .dots {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin: 15px 15px 200px 15px;
+  align-items: center;
+  margin: 5px 5px 5px 5px;
   position: relative;
   z-index: 98;
 }
 
 .dots label {
-  height: 65px;
-  width: 65px;
+  height: 55px;
+  width: 55px;
   border-radius: 50%;
   border: 3px solid white;
   cursor: pointer;
@@ -944,6 +953,9 @@ label a {
   .materiales {
     margin-top: 0px;
   }
+  .materiales-divider {
+    flex-direction: column;
+  }
   .materiales-container {
     width: 380px;
   }
@@ -960,6 +972,9 @@ label a {
   .mat_img {
     width: 80px;
     height: 160px;
+  }
+  .dots {
+    flex-direction: row;
   }
   .dots label {
     width: 75px;
