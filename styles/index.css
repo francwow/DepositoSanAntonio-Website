@@ -106,7 +106,7 @@ main {
 /* Header ------------------------------------------------------------- */
 .main-header {
   font-family: myriad, Verdana, Geneva, Tahoma, sans-serif;
-  background-color: rgb(35, 148, 0);
+  background-color: rgb(18, 18, 18);
   font-size: 1rem;
   border-radius: 0 15px 15px 0;
   display: flex;
@@ -446,7 +446,7 @@ label a {
   z-index: 96;
 }
 
-.ofertas {
+.subastas {
   background-color: white;
   width: 100vw;
   padding: 80px 20px 40px 20px;
@@ -459,13 +459,17 @@ label a {
   align-items: center;
 }
 
-.ofertas_title {
+.subastas_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0 0px 30px 0;
   color: rgb(31, 31, 32);
   width: 80%;
 }
 
-.ofertas-content {
+.subastas-content {
   margin-bottom: 200px;
   display: flex;
   flex-direction: column;
@@ -473,7 +477,7 @@ label a {
   align-items: center;
 }
 
-.ofertas-content-wrapper {
+.subastas-content-wrapper {
   background-color: rgb(31, 31, 32);
   color: white;
   padding: 20px 20px 0 20px;
@@ -500,7 +504,7 @@ label a {
   z-index: 99;
 }
 
-.modal-toggle:checked ~ .ofertas-modal-active {
+.modal-toggle:checked ~ .subastas-modal-active {
   visibility: visible;
 }
 
@@ -511,18 +515,18 @@ label a {
   z-index: 9999;
 }
 
-.modal-toggle-close:checked ~ .ofertas-modal-active {
+.modal-toggle-close:checked ~ .subastas-modal-active {
   visibility: hidden;
 }
 /* END OF MODAL TOGGLE PLACEHOLDER */
 
-.ofertas-content-wrapper:hover .ofertas-hover {
+.subastas-content-wrapper:hover .subastas-hover {
   bottom: 0;
   opacity: 1;
   transition: bottom .5s ease-in-out, opacity .3s ease-in;
 }
 
-.ofertas-hover {
+.subastas-hover {
   position: absolute;
   display: flex;
   align-items: center;
@@ -536,7 +540,7 @@ label a {
   transition: bottom .5s ease-in-out, opacity .3s ease-in;
 }
 
-.ofertas-button {
+.subastas-button {
   background-color: rgb(35, 148, 0);
   border: 0;
   border-radius: 30px;
@@ -545,20 +549,20 @@ label a {
   cursor: pointer;
 }
 
-.ofertas-button:hover {
+.subastas-button:hover {
   background-color: rgb(38, 160, 0);
 }
 
-.ofertas-button a {
+.subastas-button a {
   text-decoration: none;
   font-family: myriad, Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.ofertas-button:hover a {
+.subastas-button:hover a {
   color:white;
 }
 
-.ofertas-modal-active {
+.subastas-modal-active {
   visibility: hidden;
   position: fixed;
   display: flex;
@@ -605,7 +609,7 @@ label a {
   background-color: rgb(43, 43, 43);
 }
 
-.ofertas-form {
+.subastas-form {
   width: 300px;
   margin: 10px auto;
   padding: 20px 20px;
@@ -614,7 +618,7 @@ label a {
   font-family: myriad, Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.ofertas-form-img {
+.subastas-form-img {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -625,19 +629,19 @@ label a {
   margin-bottom: 20px;
 }
 
-.ofertas-form span {
+.subastas-form span {
   margin-top: 10px;
   color: black;
 }
 
-.ofertas-form label {
+.subastas-form label {
   font-family: myriad, Verdana, Geneva, Tahoma, sans-serif;
   color: black;
   font-size: 1.1em;
   font-weight: 600;
 }
 
-.ofertas-form input {
+.subastas-form input {
   background: rgba(255, 255, 255, 0.1);
   border: none;
   font-size: 16px;
@@ -651,7 +655,7 @@ label a {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
 }
 
-.ofertas-form button {
+.subastas-form button {
   padding: 19px 39px 18px 39px;
   color: #fff;
   background-color: rgb(35, 148, 0);
@@ -667,11 +671,11 @@ label a {
   cursor: pointer;
 }
 
-.ofertas_img {
+.subastas_img {
   width: 100px;
 }
 
-.ofertas_info {
+.subastas_info {
   position: absolute;
   bottom: 10px;
   text-align: center;
@@ -857,7 +861,7 @@ label a {
 .about-content-wrapper:hover  .header-moves,
 .materiales-container-desktop:hover .header-moves,
 .materiales-container:hover .header-moves,
-.ofertas-content:hover .header-moves,
+.subastas-content:hover .header-moves,
 .contact-content:hover .header-moves {
   transform: translateX(0);
   opacity: 1;
@@ -899,7 +903,7 @@ label a {
 
   .about,
   .materiales,
-  .ofertas,
+  .subastas,
   .contact {
     padding: 50px 30px 0 30px;
   }
@@ -966,24 +970,24 @@ label a {
     bottom: -30px;
   }
 
-  .ofertas {
+  .subastas {
     margin-top: 0px;
   }
-  .ofertas-content-wrapper {
+  .subastas-content-wrapper {
     width: 300px;
     height: 300px;
     margin: 0 0 30px;
   }
-  .ofertas_title {
+  .subastas_title {
     margin: 20px 0px 30px 0;
   }
-  .ofertas-form {
+  .subastas-form {
     width: 400px;
   }
-  .ofertas_img {
+  .subastas_img {
     width: 150px;
   }
-  .ofertas_info {
+  .subastas_info {
     font-size: 1.4em;
     bottom: 15px;
   }
@@ -1079,7 +1083,7 @@ label a {
 
   .about,
   .materiales,
-  .ofertas,
+  .subastas,
   .contact {
     padding: 60px 40px 0 40px;
   }
@@ -1142,18 +1146,18 @@ label a {
     margin: 20px;
   }
 
-  .ofertas-content-wrapper {
+  .subastas-content-wrapper {
     width: 450px;
     height: 450px;
     margin: 0 0 40px;
   }
-  .ofertas_title {
+  .subastas_title {
     margin: 20px 0px 30px 0;
   }
-  .ofertas_img {
+  .subastas_img {
     width: 250px;
   }
-  .ofertas_info {
+  .subastas_info {
     font-size: 1.6em;
     bottom: 20px;
   }
@@ -1312,7 +1316,7 @@ label a {
 
   .about,
   .materiales,
-  .ofertas,
+  .subastas,
   .contact {
     padding: 60px 40px 0 40px;
   }
@@ -1502,24 +1506,24 @@ label a {
     transition: height 0.2s ease-in;
   }
 
-  .ofertas {
+  .subastas {
     justify-items: center;
     align-items: center;
     margin-top: -80px;
   }
-  .ofertas-content {
+  .subastas-content {
     margin-top: 50px;
     margin-bottom: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
   }
-  .ofertas-content-box {
+  .subastas-content-box {
     display: flex;
     position: relative;
     justify-content: center;
   }
-  .ofertas-content-container {
+  .subastas-content-container {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
@@ -1527,27 +1531,27 @@ label a {
     gap: 2vw;
     width: 65%;
   }
-  .ofertas-content-wrapper {
+  .subastas-content-wrapper {
     margin: 0 0 40px;
     flex-basis: 30%;
     height: 300px;
   }
-  .ofertas-form {
+  .subastas-form {
     width: 500px;
   }
-  .ofertas-form-img {
+  .subastas-form-img {
     width: 150px;
   }
-  .ofertas-form label {
+  .subastas-form label {
     font-size: 1.2em;
   }
-  .ofertas_title {
+  .subastas_title {
     margin: 100px 0;
   }
-  .ofertas_img {
+  .subastas_img {
     width: 150px;
   }
-  .ofertas_info {
+  .subastas_info {
     font-size: 1.4em;
     bottom: 20px;
   }
